@@ -1,5 +1,11 @@
 # Challenge Name: Encrypt0r
 
+EU instance 161.97.176.150 4449
+
+US instance 185.172.165.118 4449
+
+Author: Soul
+
 ## First Glance
 
 We are given a remote service, and no other description. Thus we nc that service and observe the following repsonse.
