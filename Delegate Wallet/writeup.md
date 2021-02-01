@@ -10,7 +10,7 @@ Author: Soul
 
 ## First Glance
 
-We are given a remote service and a [wallet.py](https://github.com/pragyanmehrotra/0x414141_2021/blob/master/Delegate%20Wallet/wallet.py). The code running in the background. This is the most interesting piece of code in the file rest of the code is just interacting with the client. So from here it's clear that our n = 2^607 - 1 which stays constant for each execution, but m and c are generated randomly.
+We are given a remote service and a [wallet.py](https://github.com/pragyanmehrotra/0x414141_2021/blob/master/Delegate%20Wallet/wallet.py). 
 
 ```
 class prng_lcg:
@@ -26,6 +26,7 @@ class prng_lcg:
         return self.state
 
 ```
+This is the most interesting piece of code in the file rest of the code is just interacting with the client. So from here it's clear that our n = 2^607 - 1 which stays constant for each execution, but m and c are generated randomly.
 
 We have a look at the remote service as seen in wallet.py we are given 2 options to generate a new wallet seed or to guess it.
 ```
