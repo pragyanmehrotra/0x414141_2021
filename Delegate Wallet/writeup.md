@@ -36,7 +36,7 @@ We have a look at the remote service as seen in wallet.py we are given 2 options
 
 ## Approach
 
-From the above observations, our task boils down to simply finding m and c. Since if we know m and c then we can generate a seed $s$ and we would know that the next seed is given by the equation s_new = ms + c %n
+From the above observations, our task boils down to simply finding m and c. Since if we know m and c then we can generate a seed $s$ and we would know that the next seed is given by the equation s<sub>new</sub> = m\*s + c %n
 
 Now, we are given the liberty to generate as many seeds as we want. Which creates the vulnerability with reused parameters in [LCG (Linear Congruential Generator)](https://en.wikipedia.org/wiki/Linear_congruential_generator).
 
