@@ -10,7 +10,7 @@ Author: Soul
 
 ## First Glance
 
-We are given a remote service and a `wallet.py`. The code running in the background. This is the most interesting piece of code in the file rest of the code is just interacting with the client. So from here it's clear that our n = 2^607 - 1 which stays constant for each execution, but m and c are generated randomly.
+We are given a remote service and a [wallet.py](https://github.com/pragyanmehrotra/0x414141_2021/blob/master/Delegate%20Wallet/wallet.py). The code running in the background. This is the most interesting piece of code in the file rest of the code is just interacting with the client. So from here it's clear that our n = 2^607 - 1 which stays constant for each execution, but m and c are generated randomly.
 
 ```
 class prng_lcg:
@@ -42,9 +42,9 @@ Now, we are given the liberty to generate as many seeds as we want. Which create
 
 This can be seen as a simple mathematical problem as - 
 
-
+$s$
 Let s0 <- random seed, Then,
-
+$$$
 s1 = (m\*s0 + c) mod n
 s2 = (m\*s1 + c) mod n
 s3 = (m\*s2 + c) mod n
@@ -61,6 +61,7 @@ and once we have m,
 
 s2 = m\*s1 + c mod n
 => c = s2 - m\*s1 mod n
+$$$
 
 Simple code to solve the equations given s1, s2, s3
 
@@ -73,6 +74,6 @@ print "c: ", c
 print "s4: ", (s3*m + c)%n
 ```
 
-Actual solution: [solve.py]()
+Actual solution: [solve.py](https://github.com/pragyanmehrotra/0x414141_2021/blob/master/Delegate%20Wallet/solve.py)
 
 `flag{NBD_7H3Y_U53D_0ffsh1ft4532}`
