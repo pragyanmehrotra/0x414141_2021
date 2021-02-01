@@ -42,26 +42,25 @@ Now, we are given the liberty to generate as many seeds as we want. Which create
 
 This can be seen as a simple mathematical problem as - 
 
-$s$
-Let s0 <- random seed, Then,
-$$$
-s1 = (m\*s0 + c) mod n
-s2 = (m\*s1 + c) mod n
-s3 = (m\*s2 + c) mod n
+Let s0 <- random seed, Then, <br>
+
+s1 = (m\*s0 + c) mod n <br>
+s2 = (m\*s1 + c) mod n <br>
+s3 = (m\*s2 + c) mod n <br>
 
 Now, 
 
-=> s3 - s2 = (m\*s2 + c) - (m\*s1 + c) mod n
-=> s3 - s2 = m\*(s2 - s1) + c - c mod n
-=> s3 - s2 = m\*(s2 - s1) mod n
-=> (s3 - s2)\*(s2 - s1)^-1 = m\*(s2 - s1)\*(s2 - s1)^-1 mod n
-=> m = (s3 - s2)\*(s2 - s1)^-1 mod n
+=> s3 - s2 = (m\*s2 + c) - (m\*s1 + c) mod n <br>
+=> s3 - s2 = m\*(s2 - s1) + c - c mod n <br>
+=> s3 - s2 = m\*(s2 - s1) mod n <br>
+=> (s3 - s2)\*(s2 - s1)^-1 = m\*(s2 - s1)\*(s2 - s1)^-1 mod n <br>
+=> m = (s3 - s2)\*(s2 - s1)^-1 mod n <br>
 
 and once we have m,
 
-s2 = m\*s1 + c mod n
-=> c = s2 - m\*s1 mod n
-$$$
+s2 = m\*s1 + c mod n <br>
+=> c = s2 - m\*s1 mod n <br>
+
 
 Simple code to solve the equations given s1, s2, s3
 
